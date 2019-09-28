@@ -1,7 +1,13 @@
 {
   "private": true,
+  "scripts": {
+    "dev": "serve"
+  },
   "dependencies": {
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.0"
+  },
+  "devDependencies": {
+    "serve": "^11.2.0"
   }
 }
