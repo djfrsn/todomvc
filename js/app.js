@@ -24,12 +24,12 @@
     todoList.append(newTodo)
   }
 
-  function handleEvent(e) {
+  function handleTodoAdd(e) {
     if (e.code === 'Enter' && e.target.value) {
       createTodo(e.target.value)
     }
   }
 
-  todoInput.addEventListener('keyup', handleEvent)
+  todoInput.addEventListener('keyup', handleTodoAdd)
 
 })(window);
