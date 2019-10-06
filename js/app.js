@@ -30,6 +30,16 @@
     }
   }
 
+  function removeTodo(e) {
+    // e = Dom event
+
+    // traverse e.currentTarget to find parent 'li' containing todo html
+
+    // remove 'li' from dom
+  }
+
+  // TODO: Add event listener on 'X' button for each todo list
+
   todoInput.addEventListener('keyup', handleTodoAdd)
 
 })(window);
