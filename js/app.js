@@ -22,7 +22,9 @@
 
     newTodo.innerHTML = todoTemplate(value);
 
-    todoList.append(newTodo)
+    todoList.append(newTodo);
+
+    addRemoveTodoListener(newTodo.querySelector('.destroy'));
   }
 
   function handleTodoAdd(e) {
@@ -35,9 +37,12 @@
     e.currentTarget.parentElement.parentElement.remove(removeTodo)
   }
 
-  // TODO: Add event listener on 'X' button for each todo list
-  todoInput.addEventListener('keyup', handleTodoAdd)
+  function addRemoveTodoListener(button) {
+    button.addEventListener('click', removeTodo);
+  }
+
+  todoInput.addEventListener('keyup', handleTodoAdd);
   destroyTodo.forEach(function(button) {
-    button.addEventListener('click',removeTodo)
+    addRemoveTodoListener(button);
   })
 })(window);
