@@ -2,6 +2,7 @@
 	'use strict';
   const todoInput = document.querySelectorAll('.new-todo')[0];
   const todoList = document.querySelectorAll('.todo-list')[0];
+  var destroyTodo = document.querySelectorAll('.destroy');
 
 	// Your starting point. Enjoy the ride!
 
@@ -31,15 +32,12 @@
   }
 
   function removeTodo(e) {
-    // e = Dom event
-
-    // traverse e.currentTarget to find parent 'li' containing todo html
-
-    // remove 'li' from dom
+    e.currentTarget.parentElement.parentElement.remove(removeTodo)
   }
 
   // TODO: Add event listener on 'X' button for each todo list
-
   todoInput.addEventListener('keyup', handleTodoAdd)
-
+  destroyTodo.forEach(function(button) {
+    button.addEventListener('click',removeTodo)
+  })
 })(window);
